@@ -21,12 +21,12 @@
         <maven-failsafe-plugin.version>3.5.2</maven-failsafe-plugin.version>
         <spring-boot-maven-plugin.version>3.3.5</spring-boot-maven-plugin.version>
         <system-rules-version>1.19.0</system-rules-version>
-
-        <!-- Docker -->
         <jib-maven-plugin.version>3.4.2</jib-maven-plugin.version>
-
-        <!-- Structured logging -->
         <structured-logging.version>3.0.20</structured-logging.version>
+        <junit-jupiter.version>5.11.4</junit-jupiter.version>
+        <junit-jupiter-engine.version>5.11.4</junit-jupiter-engine.version>
+        <org.springframework.spring-test.version>5.3.39</org.springframework.spring-test.version>
+
 
         <start-class>uk.gov.companieshouse.postcodelookup.PostcodeLookupApplication.java</start-class>
     </properties>
@@ -47,6 +47,51 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework.spring-test.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.12.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.18.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.18.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.18.1</version>
         </dependency>
     </dependencies>
 
